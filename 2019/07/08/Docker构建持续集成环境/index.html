@@ -57,7 +57,7 @@
 <meta property="og:image" content="http://static.staryjie.com/static/images/20190630211617.png">
 <meta property="og:image" content="http://static.staryjie.com/static/images/20190630213434.png">
 <meta property="og:image" content="http://static.staryjie.com/static/images/20190630211855.png">
-<meta property="og:updated_time" content="2019-07-08T07:00:37.096Z">
+<meta property="og:updated_time" content="2019-07-08T07:01:54.439Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Docker构建持续集成环境">
 <meta name="twitter:description" content="1、CI/CD介绍​        CI/CD是一个持续的闭环的流程。  1.1 什么是CI？​        在软件工程中，持续集成（CI）是指将所有开发者的工作副本每天多次合并到主干的做法。Grady Booch 在1991年的 Booch method 中首次命名并提出了 CI 的概念，尽管在当时他并不主张每天多次集成。而 XP（Extreme programming，极限编程）采用了 CI">
@@ -237,26 +237,18 @@
 <p>   缩短了从开发、集成、测试、部署各个环节的时间，从而也就缩短了中间可以出现的等待时机。持续集成，意味着开发、集成、测试、部署也得以持续。</p>
 <p>6.更高的产品质量</p>
 <p>   集成服务器往往提供代码质量检测等功能，对不规范或有错误的地方会进行标致，也可以设置邮件和短信等进行警告。</p>
-<h4 id="1-4-CI-CD最佳实践"><a href="#1-4-CI-CD最佳实践" class="headerlink" title="1.4 CI/CD最佳实践"></a>1.4 CI/CD最佳实践</h4><ol>
-<li><p>频繁检出代码</p>
-<p>有时候代码冲突无可避免，频繁检出代码，可以让本地的副本和代码库中的版本最小差异化。</p>
-</li>
-<li><p>频繁提交代码</p>
-<p>与频繁检出代码的原理类似，频繁提交代码，可以让其他人检出副本和代码库中的版本最小差异化。</p>
-</li>
-<li><p>减少分支，回归主干</p>
-<p>多个分支并行应及早将变更集成到主干中，避免同时维护软件的多个版本。</p>
-</li>
-<li><p>使用自动化构建</p>
-<p>可以使用Maven、Ant等来实现自动化构建，可以在构建过程中实现自动化测试。前提是有写单元测试用例。</p>
-</li>
-<li><p>提交测试</p>
-<p>在提交工作之前，每个程序员必须本地集成所有代码，做一个完整的构建和运行，并通过所有的单元测试，这样能减少集成测试在集成服务器上构建失败的风险。</p>
-</li>
-<li><p>当前状态对每个人都可见</p>
-<p>集成服务器在持续集成过程中发现问题应及时发送警告给相关的干系人。</p>
-</li>
-</ol>
+<h4 id="1-4-CI-CD最佳实践"><a href="#1-4-CI-CD最佳实践" class="headerlink" title="1.4 CI/CD最佳实践"></a>1.4 CI/CD最佳实践</h4><p>1.频繁检出代码</p>
+<p>   有时候代码冲突无可避免，频繁检出代码，可以让本地的副本和代码库中的版本最小差异化。</p>
+<p>2.频繁提交代码</p>
+<p>   与频繁检出代码的原理类似，频繁提交代码，可以让其他人检出副本和代码库中的版本最小差异化。</p>
+<p>3.减少分支，回归主干</p>
+<p>   多个分支并行应及早将变更集成到主干中，避免同时维护软件的多个版本。</p>
+<p>4.使用自动化构建</p>
+<p>   可以使用Maven、Ant等来实现自动化构建，可以在构建过程中实现自动化测试。前提是有写单元测试用例。</p>
+<p>5.提交测试</p>
+<p>   在提交工作之前，每个程序员必须本地集成所有代码，做一个完整的构建和运行，并通过所有的单元测试，这样能减少集成测试在集成服务器上构建失败的风险。</p>
+<p>6.当前状态对每个人都可见</p>
+<p>   集成服务器在持续集成过程中发现问题应及时发送警告给相关的干系人。</p>
 <h3 id="2、发布流程设计"><a href="#2、发布流程设计" class="headerlink" title="2、发布流程设计"></a>2、发布流程设计</h3><p><img src="http://static.staryjie.com/static/images/20190627094657.png" alt></p>
 <h4 id="2-1-发布流程"><a href="#2-1-发布流程" class="headerlink" title="2.1 发布流程"></a>2.1 发布流程</h4><ol>
 <li>开发将代码提交到Git服务器(GitLab/GitHub/SVN等)</li>
