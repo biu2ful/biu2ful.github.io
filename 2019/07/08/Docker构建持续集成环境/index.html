@@ -57,7 +57,7 @@
 <meta property="og:image" content="http://static.staryjie.com/static/images/20190630211617.png">
 <meta property="og:image" content="http://static.staryjie.com/static/images/20190630213434.png">
 <meta property="og:image" content="http://static.staryjie.com/static/images/20190630211855.png">
-<meta property="og:updated_time" content="2019-07-08T06:55:45.720Z">
+<meta property="og:updated_time" content="2019-07-08T06:58:59.822Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Docker构建持续集成环境">
 <meta name="twitter:description" content="1、CI/CD介绍​        CI/CD是一个持续的闭环的流程。  1.1 什么是CI？​        在软件工程中，持续集成（CI）是指将所有开发者的工作副本每天多次合并到主干的做法。Grady Booch 在1991年的 Booch method 中首次命名并提出了 CI 的概念，尽管在当时他并不主张每天多次集成。而 XP（Extreme programming，极限编程）采用了 CI">
@@ -349,7 +349,7 @@
 <h5 id="6-7-检查是否正常安装docker"><a href="#6-7-检查是否正常安装docker" class="headerlink" title="6.7 检查是否正常安装docker"></a>6.7 检查是否正常安装docker</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run hello-world</span><br></pre></td></tr></table></figure>
 
 <blockquote>
-<p>下面是一个很简单的安装脚本：</p>
+<p> 下面是一个很简单的安装脚本：</p>
 </blockquote>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">!/bin/bash</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 1.安装依赖</span></span><br><span class="line">yum install -y yum-utils device-mapper-persistent-data lvm2 chrony</span><br><span class="line"><span class="meta">#</span><span class="bash"> 2.添加阿里云的docker仓库</span></span><br><span class="line">yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo</span><br><span class="line"><span class="meta">#</span><span class="bash"> 3.安装docker</span></span><br><span class="line">yum install -y docker-ce docker-ce-cli containerd.io</span><br><span class="line"><span class="meta">#</span><span class="bash"> 4.启动并设置开机自启</span></span><br><span class="line">systemctl start docker.service</span><br><span class="line">systemctl enable docker.service</span><br><span class="line"><span class="meta">#</span><span class="bash"> 5. 配置daocloud加速</span></span><br><span class="line">curl -sSL https://get.daocloud.io/daotools/set_mirror.sh | sh -s http://f1361db2.m.daocloud.io</span><br><span class="line"><span class="meta">#</span><span class="bash"> 6.重启docker服务</span></span><br><span class="line">systemctl restart docker</span><br><span class="line"><span class="meta">#</span><span class="bash"> 7.检查是否正常安装docker</span></span><br><span class="line">docker run hello-world</span><br></pre></td></tr></table></figure>
 
