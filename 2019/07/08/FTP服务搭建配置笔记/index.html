@@ -34,7 +34,7 @@
 <meta property="og:image" content="http://static.staryjie.com/static/images/20190705154758.png">
 <meta property="og:image" content="http://static.staryjie.com/static/images/20190705161128.png">
 <meta property="og:image" content="http://static.staryjie.com/static/images/20190705161328.png">
-<meta property="og:updated_time" content="2019-07-08T07:14:00.771Z">
+<meta property="og:updated_time" content="2019-07-08T07:17:46.498Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="FTP服务搭建配置笔记">
 <meta name="twitter:description" content="1、什么是文件共享服务？简单来说就是文件域存储块设备可以共享给他人使用。 1.1 实现文件共享服务的三种方式 FTP：属于应用层服务，可以跨平台使用 NFS：属于内核模式，不可以跨平台使用 Samba：可以跨平台使用  1.2 实现存储设备域服务器连接的三种方式 DAS：连接磁盘 NAS：通过nfs/cifs协议实现网络文件共享(文件存储方式)，电子邮件、网页服务器、多媒体流服务、档案分享等就适用">
@@ -201,6 +201,8 @@
 <li>NAS：通过nfs/cifs协议实现网络文件共享(文件存储方式)，电子邮件、网页服务器、多媒体流服务、档案分享等就适用于NAS存储架构</li>
 <li>SAS：通过网线或者光纤实现ISCSI和FCSAN将物理存储设备连接起来使用(块存储方式比较底层，需要格式化并挂载当本地磁盘使用)，数据库有关的应用适用于SAS存储架构</li>
 </ol>
+<a id="more"></a>
+
 <h3 id="2、FTP简介"><a href="#2、FTP简介" class="headerlink" title="2、FTP简介"></a>2、FTP简介</h3><p>FTP是File Transfer Protocol文件传输协议的缩写，基于网络来传输文件的应用层协议。</p>
 <p>FTP能够通过网络来传输文件，主要是因为工作再应用层所以不会受到平台的限制。</p>
 <h4 id="2-1-FTP的工作方式"><a href="#2-1-FTP的工作方式" class="headerlink" title="2.1 FTP的工作方式"></a>2.1 FTP的工作方式</h4><p><img src="http://static.staryjie.com/static/images/20190702114521.png" alt></p>
